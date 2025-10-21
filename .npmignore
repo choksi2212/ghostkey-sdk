@@ -1,5 +1,4 @@
 tests/
-examples/
 docs/
 .git/
 .github/
@@ -13,3 +12,7 @@ jest.config.js
 *.test.js
 tsconfig.json
 .npmignore
+*.ts
+*.tsx
+src/types/
+cleanup-typescript.bat

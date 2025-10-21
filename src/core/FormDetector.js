@@ -2,21 +2,17 @@
  * Form Detector - Automatically detects password fields
  */
 
-import { GhostKeyConfig } from '../types';
-
 export class FormDetector {
-  private config: GhostKeyConfig;
-  private observer: MutationObserver | null = null;
-  private attachedFields: Set<HTMLInputElement> = new Set();
-
-  constructor(config: GhostKeyConfig) {
+  constructor(config) {
     this.config = config;
+    this.observer = null;
+    this.attachedFields = new Set();
   }
 
   /**
    * Start detecting forms
    */
-  public start(callback: (field: HTMLInputElement, type: 'registration' | 'login') => void): void {
+  start(callback) {
     // Scan existing forms
     this.scanForForms(callback);
 
@@ -36,7 +32,7 @@ export class FormDetector {
   /**
    * Stop detecting forms
    */
-  public stop(): void {
+  stop() {
     if (this.observer) {
       this.observer.disconnect();
       this.observer = null;
@@ -46,8 +42,8 @@ export class FormDetector {
   /**
    * Scan for password fields
    */
-  private scanForForms(callback: (field: HTMLInputElement, type: 'registration' | 'login') => void): void {
-    const passwordFields = document.querySelectorAll('input[type="password"]') as NodeListOf<HTMLInputElement>;
+  scanForForms(callback) {
+    const passwordFields = document.querySelectorAll('input[type="password"]');
 
     passwordFields.forEach(field => {
       // Skip if already attached
@@ -75,7 +71,7 @@ export class FormDetector {
   /**
    * Check if form is registration
    */
-  public isRegistrationForm(form: HTMLFormElement | null): boolean {
+  isRegistrationForm(form) {
     if (!form) {
       return false;
     }
@@ -125,7 +121,7 @@ export class FormDetector {
   /**
    * Check if element is visible
    */
-  private isVisible(element: HTMLElement): boolean {
+  isVisible(element) {
     const style = window.getComputedStyle(element);
     return style.display !== 'none' && 
            style.visibility !== 'hidden' && 
