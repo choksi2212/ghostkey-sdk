@@ -1,0 +1,15 @@
+tests/
+examples/
+docs/
+.git/
+.github/
+*.log
+node_modules/
+coverage/
+.DS_Store
+rollup.config.js
+.eslintrc.js
+jest.config.js
+*.test.js
+tsconfig.json
+.npmignore
