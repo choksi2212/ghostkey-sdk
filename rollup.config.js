@@ -10,7 +10,8 @@ export default [
       file: 'dist/ghostkey.js',
       format: 'umd',
       name: 'GhostKey',
-      sourcemap: true
+      sourcemap: true,
+      exports:'named'
     },
     plugins: [
       resolve(),
