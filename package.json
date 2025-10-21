@@ -1,5 +1,5 @@
 {
-  "name": "@ghostkey/sdk",
+  "name": "ghostkey-sdk",
   "version": "1.0.0",
   "description": "Production-grade biometric authentication SDK for web applications",
   "type": "module",
