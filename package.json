@@ -1,0 +1,68 @@
+{
+  "name": "ghostkey-sdk",
+  "version": "1.0.0",
+  "description": "Production-grade biometric authentication SDK for web applications",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "authentication",
+    "biometric",
+    "keystroke-dynamics",
+    "voice-recognition",
+    "behavioral-biometrics",
+    "security",
+    "2fa",
+    "mfa",
+    "passwordless"
+  ],
+  "author": "Ghost Key Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/choksi2212/ghostkey-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/choksi2212/ghostkey-sdk/issues"
+  },
+  "homepage": "https://github.com/choksi2212/ghostkey-sdk",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "vue": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/jest": "^29.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {}
+}
